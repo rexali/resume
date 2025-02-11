@@ -1,0 +1,17 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "homepage": "https://rexali.github.io/resume",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy":"rm -rf build && mkdir build && rsync -r -av --progress . build/ --exclude node_modules --exclude ProfileMaikarfi2024.pdf --exclude .git --exclude build",
+    "deployed": "gh-pages -d ."
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}
